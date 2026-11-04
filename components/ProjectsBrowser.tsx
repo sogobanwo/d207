@@ -1,8 +1,10 @@
 "use client";
 
+import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { projectCategories, type Project } from "@/lib/projects";
 import { FilterChips } from "./FilterChips";
+import { FilterItem } from "./motion/Reveal";
 import { ProjectCard } from "./ProjectCard";
 
 type Category = (typeof projectCategories)[number];
@@ -23,14 +25,17 @@ export function ProjectsBrowser({ projects }: { projects: Project[] }) {
         </p>
       </div>
       <div className="mt-14 grid items-start gap-x-8 gap-y-16 md:grid-cols-2 xl:grid-cols-3">
-        {shown.map((p, i) => (
-          <ProjectCard
-            key={p.slug}
-            project={p}
-            showLocation
-            aspect={i % 4 === 0 || i % 4 === 3 ? "aspect-[16/11]" : "aspect-[4/5]"}
-          />
-        ))}
+        <AnimatePresence mode="popLayout">
+          {shown.map((p, i) => (
+            <FilterItem key={p.slug} index={i}>
+              <ProjectCard
+                project={p}
+                showLocation
+                aspect={i % 4 === 0 || i % 4 === 3 ? "aspect-[16/11]" : "aspect-[4/5]"}
+              />
+            </FilterItem>
+          ))}
+        </AnimatePresence>
       </div>
     </>
   );

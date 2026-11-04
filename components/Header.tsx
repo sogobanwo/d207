@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -26,7 +27,13 @@ export function Header() {
 
   return (
     <div className={overlay ? "absolute inset-x-0 top-0 z-30" : "relative z-30 bg-navy"}>
-      <nav aria-label="Main" className="site-wrap flex items-center justify-between gap-6 py-5 md:py-7">
+      <motion.nav
+        aria-label="Main"
+        className="site-wrap flex items-center justify-between gap-6 py-5 md:py-7"
+        initial={{ opacity: 0, y: -16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+      >
         <Link href="/" aria-label={`${site.name} home`} className="shrink-0">
           <Image
             src="/logo-white.png"
@@ -82,7 +89,7 @@ export function Header() {
             )}
           </button>
         </div>
-      </nav>
+      </motion.nav>
 
       {open && (
         <div id="mobile-menu" className="fixed inset-x-0 bottom-0 top-[88px] z-40 overflow-y-auto bg-navy px-6 pb-10 pt-4 lg:hidden">

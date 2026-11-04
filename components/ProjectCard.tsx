@@ -13,7 +13,7 @@ export function ProjectCard({
 }) {
   return (
     <Link href={`/projects/${project.slug}`} className="group flex flex-col gap-5 text-ink">
-      <div className={`relative overflow-hidden bg-stone ${aspect}`}>
+      <div data-cursor="view" className={`relative overflow-hidden bg-stone ${aspect}`}>
         <Image
           src={project.image}
           alt={project.imageAlt}

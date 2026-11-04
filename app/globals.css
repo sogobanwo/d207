@@ -34,6 +34,22 @@
     outline: 2px solid var(--color-brand);
     outline-offset: 3px;
   }
+
+  /* Custom cursor (components/motion/Cursor.tsx) replaces the native one, except in text fields. */
+  html.has-custom-cursor,
+  html.has-custom-cursor * {
+    cursor: none !important;
+  }
+  html.has-custom-cursor :is(input, textarea, [contenteditable="true"]) {
+    cursor: text !important;
+  }
+
+  /* Hide split headings until GSAP has split them, so they don't flash before animating in. */
+  @media (prefers-reduced-motion: no-preference) {
+    html.js .split-reveal {
+      visibility: hidden;
+    }
+  }
 }
 
 @utility site-wrap {
