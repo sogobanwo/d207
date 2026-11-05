@@ -22,13 +22,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-// TODO(D207): replace with real photography for each project.
-const gallery = [
-  { src: "/images/interiors.jpg", alt: "Living room interior", wide: true },
-  { src: "/images/finish.jpg", alt: "Kitchen with island" },
-  { src: "/images/bedroom.jpg", alt: "Master bedroom" },
-];
-
 export default async function ProjectPage({ params }: Props) {
   const { slug } = await params;
   const project = getProject(slug);
@@ -94,15 +87,17 @@ export default async function ProjectPage({ params }: Props) {
         </div>
       </section>
 
-      <section className="site-wrap pb-24 md:pb-30">
-        <div className="grid gap-6 md:grid-cols-2">
-          {gallery.map((g) => (
-            <div key={g.src} className={`relative overflow-hidden bg-stone ${g.wide ? "aspect-[16/9] md:col-span-2 md:aspect-[21/9]" : "aspect-[4/5]"}`}>
-              <Image src={g.src} alt={g.alt} fill sizes={g.wide ? "100vw" : "(min-width: 768px) 50vw, 100vw"} className="object-cover" />
-            </div>
-          ))}
-        </div>
-      </section>
+      {project.gallery && (
+        <section className="site-wrap pb-24 md:pb-30">
+          <div className="grid gap-6 md:grid-cols-2">
+            {project.gallery.map((g) => (
+              <div key={g.src} className={`relative overflow-hidden bg-stone ${g.wide ? "aspect-[16/9] md:col-span-2 md:aspect-[21/9]" : "aspect-[4/5]"}`}>
+                <Image src={g.src} alt={g.alt} fill sizes={g.wide ? "100vw" : "(min-width: 768px) 50vw, 100vw"} className="object-cover" />
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       <section className="border-t border-ink/15">
         <Link href={`/projects/${next.slug}`} className="site-wrap group flex flex-wrap items-center justify-between gap-8 py-18">

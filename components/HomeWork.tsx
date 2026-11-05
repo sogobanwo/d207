@@ -7,11 +7,9 @@ import { FilterChips } from "./FilterChips";
 import { FilterItem } from "./motion/Reveal";
 import { ProjectCard } from "./ProjectCard";
 
-const areas = ["All", "Lekki Phase 1", "Ikate", "Oniru", "VGC"] as const;
-type Area = (typeof areas)[number];
-
 export function HomeWork({ projects, heading }: { projects: Project[]; heading: ReactNode }) {
-  const [area, setArea] = useState<Area>("All");
+  const areas = ["All", ...new Set(projects.map((p) => p.area))];
+  const [area, setArea] = useState("All");
   const shown = projects.filter((p) => area === "All" || p.area === area);
 
   return (

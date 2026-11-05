@@ -4,19 +4,19 @@ export const services = [
     slug: "construction",
     tag: "Residential · Commercial · Infrastructure",
     title: "Construction",
-    short: "Detached residences, duplexes and apartment blocks, plus roads, drainage and renovation works.",
+    short: "Detached residences to multi-storey apartment blocks, plus roads, drainage and embankments.",
     description:
-      "Detached residences, duplexes and apartment blocks, delivered with disciplined attention to safety, economy and architectural detail.",
+      "From stand-alone detached buildings to multi-storey apartment blocks, built to the safest industry practices — with rigorous attention to the contemporary architectural detail that makes a structure stand out.",
     includes: [
       "Detached houses & duplexes",
       "Apartment blocks",
-      "Road works & drainage",
+      "Road construction & rehabilitation",
+      "Drainage",
       "Embankments",
       "Renovation & upgrades",
-      "Subcontract structural works",
     ],
     image: "/images/construction.jpg",
-    imageAlt: "Site team standing on a reinforced concrete slab",
+    imageAlt: "Render of a D207 apartment block with timber balcony screens",
   },
   {
     number: "02",
@@ -25,7 +25,7 @@ export const services = [
     title: "Smart Home Technology",
     short: "Lighting, climate, security, access, blinds and multimedia — one system, designed in from day one.",
     description:
-      "Integrated smart building systems, planned with the structure so cabling, controls and devices are built in rather than added later.",
+      "From simple media-room control to fully integrated whole-house audio, automation and video — or non-invasive retrofits — designed for efficiency and simplicity.",
     includes: [
       "Lighting & scenes",
       "HVAC & climate",
@@ -35,7 +35,7 @@ export const services = [
       "Access control",
     ],
     image: "/images/smart.jpg",
-    imageAlt: "Smart lock being opened from a phone",
+    imageAlt: "Render of a bedroom with integrated lighting and media wall",
   },
   {
     number: "03",
@@ -44,7 +44,7 @@ export const services = [
     title: "Interiors & Furnishing",
     short: "Bespoke finishes and furnishing, with materials sourced locally and abroad to your specification.",
     description:
-      "Premium finishes, furnishing and interior design to your specification, using materials sourced locally and internationally.",
+      "Top-of-the-range finishes and bespoke furnishing to your specification, with materials sourced locally and internationally for design, quality and intelligent function.",
     includes: [
       "Wall, floor & ceiling finishes",
       "Joinery & built-ins",
@@ -54,7 +54,7 @@ export const services = [
       "Turnkey handover",
     ],
     image: "/images/interiors.jpg",
-    imageAlt: "Finished living room with a coffered ceiling",
+    imageAlt: "Render of a cream lounge with a marble media wall",
   },
   {
     number: "04",
@@ -66,7 +66,7 @@ export const services = [
       "Decorative stamped concrete and hardscape for residences, estates and outdoor spaces — durable, low-maintenance and finished with care.",
     includes: ["Driveways", "Poolsides", "Courts", "Estate walkways", "Patios & terraces", "Exterior circulation"],
     image: "/images/stamp.jpg",
-    imageAlt: "Pool deck at a modern villa",
+    imageAlt: "Stamped concrete paving with a slate texture",
   },
 ];
 
@@ -76,28 +76,28 @@ export const process = [
     title: "Brief & site review",
     text: "We study your plot, plans and ambitions, and agree what success looks like.",
     image: "/images/brief.jpg",
-    imageAlt: "Architect drafting plans",
+    imageAlt: "Design render of an apartment entrance",
   },
   {
     numeral: "II.",
     title: "Technical scope",
     text: "Structure, systems and finishes are specified together, with a clear schedule and cost.",
     image: "/images/scope.jpg",
-    imageAlt: "Builder working on a timber frame",
+    imageAlt: "Reinforcement laid out on a slab",
   },
   {
     numeral: "III.",
     title: "Disciplined build",
     text: "Quality checks on materials and workmanship, and HSE standards on every site.",
     image: "/images/build.jpg",
-    imageAlt: "Crew fixing reinforcement on site",
+    imageAlt: "Crew working from timber scaffolding",
   },
   {
     numeral: "IV.",
     title: "Finish & handover",
     text: "Interiors, furnishing and systems commissioned — handed over ready to live in.",
     image: "/images/finish.jpg",
-    imageAlt: "Finished kitchen with an island",
+    imageAlt: "Render of a finished lounge",
   },
 ];
 
@@ -110,18 +110,21 @@ export const faqs = [
   },
   { q: "How are payments structured?", a: "[Stage-based payment schedule — to confirm with D207.]" },
   { q: "Do you provide a warranty on your work?", a: "[Warranty period and coverage — to confirm with D207.]" },
-  { q: "Can you add smart home systems to an existing house?", a: "[Retrofit offering — to confirm with D207.]" },
+  {
+    q: "Can you add smart home systems to an existing house?",
+    a: "Yes. Alongside systems designed into new builds, we offer non-invasive retrofit solutions — from media-room control to whole-house audio, automation and video.",
+  },
 ];
 
 export const values = [
-  { title: "Excellence", text: "Excellence is not an option for us — it is the standard every engagement is held to." },
-  { title: "Quality delivery", text: "Disciplined execution, material standards and continuous monitoring on every project." },
+  { title: "Excellence", text: "Excellence to us is not an option — it’s a requirement." },
+  { title: "Quality delivery", text: "Quality is everything. Perfection is entirely possible." },
   {
     title: "Creativity & innovation",
-    text: "We think locally and act globally, bringing contemporary design and technology to Lagos homes.",
+    text: "Thinking locally; acting globally.",
   },
-  { title: "Teamwork", text: "Engineering, construction, interiors, technology and management working to one objective." },
-  { title: "Value creation", text: "Every project is a chance to create lasting comfort, usability, beauty and value." },
+  { title: "Teamwork", text: "Together Everyone Achieves More." },
+  { title: "Value creation", text: "We do our very best every time to create the best." },
 ];
 
 export const governance = [
@@ -138,8 +141,36 @@ export const governance = [
   {
     tag: "Community",
     title: "CSR Commitment",
-    text: "Charitable support for the communities we work in, with a future focus on recovery, rehabilitation and therapeutic centres.",
+    text: "Yearly visits to orphanages, homes for the elderly, special-needs schools and children’s hospices — with future funding for recovery and rehabilitation centres and research into childhood bone and blood cancers.",
   },
+];
+
+export const team = [
+  { name: "Jerry Sam-Raji", role: "Head of Operations / Lead Project Engineer" },
+  { name: "Eric Hinson", role: "Lead Civil / Structural Engineer" },
+  { name: "Martins Anani", role: "Principal Finance & Business Administrator" },
+  { name: "Toyosi Williams", role: "Business Development Executive" },
+  { name: "Dimowo Mohammed", role: "Mechanical & Electrical Lead Engineer" },
+  { name: "Oludolapo Akinsanya", role: "Project Management / Consultant" },
+  { name: "Lade Akinyemiju", role: "Head of Administration" },
+  { name: "Patrick Johnson", role: "Logistics Chief" },
+  { name: "Salau Isah Adigun", role: "Logistics Chief II" },
+  { name: "Ademola Fagbemi", role: "Project Controls Executive" },
+  { name: "Ibe Ukonu", role: "Head of Smart Home Automation" },
+  { name: "Nnenna Nwaji", role: "Head of Marketing / Management" },
+  { name: "Ososanya Segun", role: "Brand Manager" },
+];
+
+export const advisors = ["Barr. Felix Okonti", "Mr. Tunji Adepetun"];
+
+export const partners = [
+  "Darham Constructions",
+  "London Design Projects",
+  "Fatlabs Construction Company",
+  "SPG Constructions",
+  "Raydioville Multimedia Nigeria Limited",
+  "Allstin Ventures Limited",
+  "SteelQuest Nigeria Limited",
 ];
 
 export const projectTypes = [

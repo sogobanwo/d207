@@ -65,7 +65,7 @@ export default function ServicesPage() {
           <div className="relative aspect-[16/10] w-full flex-[1_1_480px] overflow-hidden">
             <Image
               src="/images/projects/carlton-gate.jpg"
-              alt="Furnished living room with large windows"
+              alt="Furnished living room with a crystal chandelier"
               fill
               sizes="(min-width: 1024px) 600px, 100vw"
               className="object-cover"

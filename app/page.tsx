@@ -20,7 +20,7 @@ export default function HomePage() {
         <Parallax amount={20} zoom>
           <Image
             src="/images/hero.jpg"
-            alt="A contemporary two-storey residence lit at dusk"
+            alt="Render of Phoenix Apartments at sunset"
             fill
             priority
             sizes="100vw"
@@ -69,7 +69,7 @@ export default function HomePage() {
         </div>
 
         <div className="site-wrap eyebrow relative hidden justify-between pb-7 text-[11px] tracking-[0.16em] text-haze md:flex">
-          <span>Featured · Road 26 Duplex Residences, Lekki Ph.1</span>
+          <span>Featured · Phoenix Apartments, Lagos</span>
           <span className="animate-bounce">Scroll ↓</span>
         </div>
       </section>
@@ -87,7 +87,7 @@ export default function HomePage() {
             </SplitReveal>
             <div className="mt-14 grid border-t border-ink/15 sm:grid-cols-3 md:mt-18">
               <Stat value={String(site.established)} label="Incorporated and building in Lagos" divider={false} />
-              <Stat value={String(projects.length)} label="Signature residences across Lekki, Ikate, Oniru and VGC" />
+              <Stat value={String(projects.length)} label="Projects across Lekki, Ikate, Oniru, Agungi and VGC" />
               <Stat value={String(services.length)} label="Disciplines under one roof — build, systems, interiors, hardscape" />
             </div>
             <div className="mt-12">
@@ -180,7 +180,7 @@ export default function HomePage() {
             <Parallax amount={16}>
               <Image
                 src="/images/night.jpg"
-                alt="A modern home with every room lit at night"
+                alt="Render of an apartment block with every balcony lit at night"
                 fill
                 sizes="(min-width: 1024px) 600px, 100vw"
                 className="object-cover"

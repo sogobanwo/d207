@@ -73,8 +73,8 @@ export async function POST(req: Request) {
     method: "POST",
     headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
     body: JSON.stringify({
-      from: process.env.CONTACT_FROM ?? "D207 Website <website@d207.com.ng>",
-      to: [process.env.CONTACT_TO ?? "info@d207construction.com.ng"],
+      from: process.env.CONTACT_FROM ?? "D207 Website <website@d207construction.com>",
+      to: [process.env.CONTACT_TO ?? "info@d207construction.com"],
       reply_to: brief.email,
       subject: `New brief: ${brief.projectType} — ${brief.name}`,
       text,
